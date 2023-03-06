@@ -1,0 +1,1933 @@
+********************************************************************************
+* DUPLICATOR LITE: Install-Log
+* STEP-0 START @ 05:55:47
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ ORIGINAL SERVER                        |CURRENT SERVER
+OS__________________: Linux                                 |WINNT
+PHP VERSION_________: 7.4.30                                |7.4.14
+********************************************************************************
+CURRENT SERVER INFO
+PHP_________________: 7.4.14 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+ARCHITECTURE________: 64-bit
+SERVER______________: Apache
+DOC ROOT____________: "E:/OpenServer/domains/pricer.loc"
+REQUEST URL_________: "http://pricer.loc"
+********************************************************************************
+OVERWRITE PARAMS
+ *** FROM PACKAGE
+PARAM SET KEY[blogname]
+********************************************************************************
+[PHP ERR][E_WARNING] MSG:mysqli_real_connect(): (HY000/1045): Access denied for user 'website'@'localhost' (using password: YES) [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:54]
+DATABASE CONNECTION ERROR: Access denied for user 'website'@'localhost' (using password: YES)[ERRNO:1045]
+[PHP ERR][E_WARNING] MSG:mysqli_real_escape_string() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+[PHP ERR][E_WARNING] MSG:mysqli_select_db() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+DATABASE SELECT DB ERROR: website BUT IS CONNECTED SO CONTINUE
+
+EXCEPTION ERROR:  wp-config.php exists but database data connection isn't valid. Continuing with standard install
+	FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\class.installer.state.php[103]
+	TRACE:
+#0 E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php(393): DUPX_InstallerState->checkState()
+#1 E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php(93): Duplicator\Installer\Core\Bootstrap::initInstallerFiles()
+#2 E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php(51): Duplicator\Installer\Core\Bootstrap::init()
+#3 {main}
+
+MAINTENANCE MODE DISABLE
+INSTALLER INFO
+
+TEMPLATE____________: "base"
+VALIDATE ON START___: "normal"
+PATH_NEW____________: "E:/OpenServer/domains/pricer.loc"
+URL_NEW_____________: "http://pricer.loc"
+********************************************************************************
+ARCHIVE INFO
+
+ARCHIVE NAME________: "E:/OpenServer/domains/pricer.loc/202302095_pricer_[HASH]_20230303193247_archive.zip"
+ARCHIVE SIZE________: 4.01MB
+CREATED_____________: 2023-03-03 19:32:47
+WP VERSION__________: 6.0.2
+DUP VERSION_________: 1.5.0
+LICENSE_____________: Free version
+DB VERSION__________: 8.0.32
+DB FILE SIZE________: 34.14MB
+DB TABLES___________: 29
+DB ROWS_____________: 86633
+URL HOME____________: https://pricer24.com
+URL CORE____________: https://pricer24.com
+URL CONTENT_________: https://pricer24.com/wp-content
+URL UPLOAD__________: https://pricer24.com/wp-content/uploads
+URL PLUGINS_________: https://pricer24.com/wp-content/plugins
+URL MU PLUGINS______: https://pricer24.com/wp-content/mu-plugins
+URL THEMES__________: https://pricer24.com/wp-content/themes
+PATH HOME___________: /var/www/vhost/pricer24.com
+PATH ABS____________: /var/www/vhost/pricer24.com
+PATH WPCONFIG_______: /var/www/vhost/pricer24.com
+PATH WPCONTENT______: /var/www/vhost/pricer24.com/wp-content
+PATH UPLOADS________: /var/www/vhost/pricer24.com/wp-content/uploads
+PATH PLUGINS________: /var/www/vhost/pricer24.com/wp-content/plugins
+PATH MUPLUGINS______: /var/www/vhost/pricer24.com/wp-content/mu-plugins
+PATH THEMES_________: /var/www/vhost/pricer24.com/wp-content/themes
+
+SUBSITES
+SUBSITE [ID:   1] "pricer24.com/"
+
+PLUGINS
+PLUGIN [SLUG:acf-options-for-polylang/bea-acf-options-for-polylang.php][ON:true ]  ACF Options for Polylang
+PLUGIN [SLUG:acf-code-field/acf-code-field.php                 ][ON:true ]  Advanced Custom Fields: ACF Code Field
+PLUGIN [SLUG:advanced-custom-fields-pro/acf.php                ][ON:true ]  Advanced Custom Fields PRO
+PLUGIN [SLUG:all-in-one-wp-migration/all-in-one-wp-migration.php][ON:true ]  All-in-One WP Migration
+PLUGIN [SLUG:all-in-one-wp-migration-ftp-extension/all-in-one-wp-migration-ftp-extension.php][ON:true ]  All-in-One WP Migration FTP Extension
+PLUGIN [SLUG:gs-examples/gs-examples.php                       ][ON:false]  Career Examples
+PLUGIN [SLUG:cf7-grid-layout/cf7-grid-layout.php               ][ON:true ]  CF7 Smart Grid Design Extension
+PLUGIN [SLUG:classic-editor/classic-editor.php                 ][ON:true ]  Classic Editor
+PLUGIN [SLUG:contact-form-7/wp-contact-form-7.php              ][ON:true ]  Contact Form 7
+PLUGIN [SLUG:cf7-polylang/cf7-polylang.php                     ][ON:true ]  Contact Form 7 Polylang extension
+PLUGIN [SLUG:crisp/crisp.php                                   ][ON:true ]  Crisp
+PLUGIN [SLUG:cyr2lat/cyr-to-lat.php                            ][ON:true ]  Cyr-To-Lat
+PLUGIN [SLUG:duplicator/duplicator.php                         ][ON:true ]  Duplicator
+PLUGIN [SLUG:easy-wp-smtp/easy-wp-smtp.php                     ][ON:true ]  Easy WP SMTP
+PLUGIN [SLUG:flamingo/flamingo.php                             ][ON:true ]  Flamingo
+PLUGIN [SLUG:contact-form-7-honeypot/honeypot.php              ][ON:true ]  Honeypot for Contact Form 7
+PLUGIN [SLUG:official-facebook-pixel/facebook-for-wordpress.php][ON:true ]  Meta pixel for WordPress
+PLUGIN [SLUG:polylang/polylang.php                             ][ON:false]  Polylang
+PLUGIN [SLUG:polylang-pro/polylang.php                         ][ON:true ]  Polylang Pro
+PLUGIN [SLUG:redirection/redirection.php                       ][ON:false]  Redirection
+PLUGIN [SLUG:regenerate-thumbnails/regenerate-thumbnails.php   ][ON:true ]  Regenerate Thumbnails
+PLUGIN [SLUG:svg-support/svg-support.php                       ][ON:true ]  SVG Support
+PLUGIN [SLUG:insert-headers-and-footers/ihaf.php               ][ON:true ]  WPCode Lite
+PLUGIN [SLUG:wordpress-seo/wp-seo.php                          ][ON:true ]  Yoast SEO
+PLUGIN [SLUG:gs-theme-style/gs-theme-style.php                 ][ON:true ]  Изменяем стилей и добавление новых
+PLUGIN [SLUG:gs-userinfo/gs-userinfo.php                       ][ON:true ]  Плагин JavaScript переадесация по Региону для PolyLang
+
+********************************************************************************
+[PHP ERR][E_NOTICE] MSG:ob_end_clean(): failed to delete buffer. No buffer to delete [CODE:8|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php|LINE:84]
+
+====================================
+NEXT STEP NOTICES
+====================================
+-----------------------
+[WARNING] wp-config.php exists but isn't valid. Continue on standard install.
+	LONG MSG: Exception message: wp-config.php exists but database data connection isn't valid. Continuing with standard install
+
+
+====================================
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\ctrl.base.php:227][DELTA:   4.52342]  MESSAGE:END RENDER PAGE
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+[PHP ERR][E_WARNING] MSG:mysqli_real_connect(): (HY000/1045): Access denied for user 'website'@'localhost' (using password: YES) [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:54]
+DATABASE CONNECTION ERROR: Access denied for user 'website'@'localhost' (using password: YES)[ERRNO:1045]
+[PHP ERR][E_WARNING] MSG:mysqli_real_escape_string() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+[PHP ERR][E_WARNING] MSG:mysqli_select_db() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+DATABASE SELECT DB ERROR: website BUT IS CONNECTED SO CONTINUE
+
+EXCEPTION ERROR:  wp-config.php exists but database data connection isn't valid. Continuing with standard install
+	FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\class.installer.state.php[103]
+	TRACE:
+#0 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.params.php(153): DUPX_InstallerState->checkState()
+#1 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.ajax.php(177): DUPX_Ctrl_Params::setParamsStep1()
+#2 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.ajax.php(92): DUPX_Ctrl_ajax::actions()
+#3 E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php(56): DUPX_Ctrl_ajax::controller()
+#4 {main}
+
+-----------------------
+[WARNING] wp-config.php exists but isn't valid. Continue on standard install.
+	LONG MSG: Exception message: wp-config.php exists but database data connection isn't valid. Continuing with standard install
+
+
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+STEP ACTION: "on-validate"
+[PHP ERR][E_NOTICE] MSG:ob_end_clean(): failed to delete buffer. No buffer to delete [CODE:8|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php|LINE:84]
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\ctrl.base.php:227][DELTA:   2.38376]  MESSAGE:END RENDER PAGE
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [validate] START
+START TEST "Archive Check" [CLASS: DUPX_Validation_test_archive_check]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Archive Check" RESULT: passed
+
+START TEST "Duplicator importer version" [CLASS: DUPX_Validation_test_importer_version]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Duplicator importer version" RESULT: skip
+
+START TEST "Overwrite Install" [CLASS: DUPX_Validation_test_owrinstall]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Overwrite Install" RESULT: skip
+
+START TEST "Recovery Point" [CLASS: DUPX_Validation_test_recovery]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Recovery Point" RESULT: skip
+
+START TEST "Package is Importable" [CLASS: DUPX_Validation_test_importable]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Package is Importable" RESULT: skip
+
+START TEST "REST API test" [CLASS: DUPX_Validation_test_rest_api]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "REST API test" RESULT: skip
+
+START TEST "Manual extraction detected" [CLASS: DUPX_Validation_test_manual_extraction]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Manual extraction detected" RESULT: good
+
+START TEST "Database Only" [CLASS: DUPX_Validation_test_dbonly_iswordpress]
+LOG-TIME[DELTA:   0.00015]  MESSAGE:TEST "Database Only" RESULT: good
+
+START TEST "Package Age" [CLASS: DUPX_Validation_test_package_age]
+LOG-TIME[DELTA:   0.00008]  MESSAGE:TEST "Package Age" RESULT: good
+
+START TEST "Replace PATHs in database" [CLASS: DUPX_Validation_test_replace_paths]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Replace PATHs in database" RESULT: skip
+
+START TEST "Managed hosting supported" [CLASS: DUPX_Validation_test_managed_supported]
+LOG-TIME[DELTA:   0.00022]  MESSAGE:TEST "Managed hosting supported" RESULT: skip
+
+START TEST "Siteground" [CLASS: DUPX_Validation_test_siteground]
+LOG-TIME[DELTA:   0.00015]  MESSAGE:TEST "Siteground" RESULT: skip
+
+START TEST "Addon Sites" [CLASS: DUPX_Validation_test_addon_sites]
+--------------------------------------
+PATHS MAPPING : "E:/OpenServer/domains/pricer.loc"
+--------------------------------------
+LOG-TIME[DELTA:   1.60310]  MESSAGE:TEST "Addon Sites" RESULT: good
+
+START TEST "Wordfence" [CLASS: DUPX_Validation_test_wordfence]
+LOG-TIME[DELTA:   0.00080]  MESSAGE:TEST "Wordfence" RESULT: good
+
+START TEST "Table prefix of managed hosting" [CLASS: DUPX_Validation_test_managed_tprefix]
+LOG-TIME[DELTA:   0.00021]  MESSAGE:TEST "Table prefix of managed hosting" RESULT: skip
+
+START TEST "PHP Version Mismatch" [CLASS: DUPX_Validation_test_php_version]
+LOG-TIME[DELTA:   0.00005]  MESSAGE:TEST "PHP Version Mismatch" RESULT: good
+
+START TEST "PHP Open Base" [CLASS: DUPX_Validation_test_open_basedir]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "PHP Open Base" RESULT: good
+
+START TEST "PHP Memory Limit" [CLASS: DUPX_Validation_test_memory_limit]
+LOG-TIME[DELTA:   0.00003]  MESSAGE:TEST "PHP Memory Limit" RESULT: good
+
+START TEST "PHP Extensions" [CLASS: DUPX_Validation_test_extensions]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "PHP Extensions" RESULT: good
+
+START TEST "PHP Mysqli" [CLASS: DUPX_Validation_test_mysql_connect]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "PHP Mysqli" RESULT: passed
+
+START TEST "PHP Tokenizer" [CLASS: DUPX_Validation_test_tokenizer]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "PHP Tokenizer" RESULT: passed
+
+START TEST "PHP Timeout" [CLASS: DUPX_Validation_test_timeout]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Timeout" RESULT: good
+
+START TEST "Disk Space" [CLASS: DUPX_Validation_test_disk_space]
+LOG-TIME[DELTA:   0.00049]  MESSAGE:TEST "Disk Space" RESULT: good
+
+START TEST "Permissions: General" [CLASS: DUPX_Validation_test_iswritable]
+LOG-TIME[DELTA:   0.00866]  MESSAGE:TEST "Permissions: General" RESULT: passed
+
+START TEST "Permissions: Configs Files " [CLASS: DUPX_Validation_test_iswritable_configs]
+LOG-TIME[DELTA:   0.00104]  MESSAGE:TEST "Permissions: Configs Files " RESULT: passed
+
+START TEST "Host Name" [CLASS: DUPX_Validation_test_db_host_name]
+LOG-TIME[DELTA:   0.00003]  MESSAGE:TEST "Host Name" RESULT: passed
+
+START TEST "Host Connection" [CLASS: DUPX_Validation_test_db_connection]
+LOG-TIME[DELTA:   2.07334]  MESSAGE:TEST "Host Connection" RESULT: passed
+
+START TEST "Database Version" [CLASS: DUPX_Validation_test_db_version]
+LOG-TIME[DELTA:   0.00359]  MESSAGE:TEST "Database Version" RESULT: passed
+
+START TEST "Create New Database" [CLASS: DUPX_Validation_test_db_create]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Create New Database" RESULT: skip
+
+START TEST "Database Engine Support" [CLASS: DUPX_Validation_test_db_supported_engine]
+LOG-TIME[DELTA:   0.00029]  MESSAGE:TEST "Database Engine Support" RESULT: passed
+
+START TEST "Database GTID Mode" [CLASS: DUPX_Validation_test_db_gtid_mode]
+LOG-TIME[DELTA:   0.00018]  MESSAGE:TEST "Database GTID Mode" RESULT: passed
+
+START TEST "Privileges: User Visibility" [CLASS: DUPX_Validation_test_db_visibility]
+LOG-TIME[DELTA:   0.00038]  MESSAGE:TEST "Privileges: User Visibility" RESULT: passed
+
+START TEST "Manual Table Check" [CLASS: DUPX_Validation_test_db_manual_tabels_count]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Manual Table Check" RESULT: skip
+
+START TEST "Multiple WordPress Installs" [CLASS: DUPX_Validation_test_db_multiple_wp_installs]
+LOG-TIME[DELTA:   0.01055]  MESSAGE:TEST "Multiple WordPress Installs" RESULT: passed
+
+START TEST "Privileges: User Resources" [CLASS: DUPX_Validation_test_db_user_resources]
+LOG-TIME[DELTA:   0.00041]  MESSAGE:TEST "Privileges: User Resources" RESULT: passed
+
+START TEST "Privileges: User Table Access" [CLASS: DUPX_Validation_test_db_user_perms]
+LOG-TIME[DELTA:   0.11627]  MESSAGE:TEST "Privileges: User Table Access" RESULT: passed
+
+START TEST "Privileges: 'Show Variables' Query" [CLASS: DUPX_Validation_test_db_custom_queries]
+LOG-TIME[DELTA:   0.00201]  MESSAGE:TEST "Privileges: 'Show Variables' Query" RESULT: passed
+
+START TEST "Source Database Triggers" [CLASS: DUPX_Validation_test_db_triggers]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Source Database Triggers" RESULT: passed
+
+START TEST "Character Set and Collation Support" [CLASS: DUPX_Validation_test_db_supported_default_charset]
+LOG-TIME[DELTA:   0.00236]  MESSAGE:TEST "Character Set and Collation Support" RESULT: passed
+
+START TEST "Character Set and  Collation Capability" [CLASS: DUPX_Validation_test_db_supported_charset]
+LOG-TIME[DELTA:   0.00006]  MESSAGE:TEST "Character Set and  Collation Capability" RESULT: hard warning
+
+START TEST "Tables Case Sensitivity" [CLASS: DUPX_Validation_test_db_case_sensitive_tables]
+LOG-TIME[DELTA:   0.00152]  MESSAGE:TEST "Tables Case Sensitivity" RESULT: passed
+
+START TEST "Tables Flagged for Removal or Backup" [CLASS: DUPX_Validation_test_db_affected_tables]
+LOG-TIME[DELTA:   0.00346]  MESSAGE:TEST "Tables Flagged for Removal or Backup" RESULT: soft warning
+
+START TEST "Prefix too long" [CLASS: DUPX_Validation_test_db_prefix_too_long]
+LOG-TIME[DELTA:   0.00014]  MESSAGE:TEST "Prefix too long" RESULT: passed
+
+START TEST "Database cleanup" [CLASS: DUPX_Validation_test_db_cleanup]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Database cleanup" RESULT: skip
+
+
+CTRL PARAMS AFTER VALIDATION
+AJAX ACTION [validate] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [proceed_confirm_dialog] START
+AJAX ACTION [proceed_confirm_dialog] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+[PHP ERR][E_WARNING] MSG:mysqli_real_connect(): (HY000/1045): Access denied for user 'website'@'localhost' (using password: YES) [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:54]
+DATABASE CONNECTION ERROR: Access denied for user 'website'@'localhost' (using password: YES)[ERRNO:1045]
+[PHP ERR][E_WARNING] MSG:mysqli_real_escape_string() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+[PHP ERR][E_WARNING] MSG:mysqli_select_db() expects parameter 1 to be mysqli, null given [CODE:2|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\database\class.db.php|LINE:65]
+DATABASE SELECT DB ERROR: website BUT IS CONNECTED SO CONTINUE
+
+EXCEPTION ERROR:  wp-config.php exists but database data connection isn't valid. Continuing with standard install
+	FILE:E:\OpenServer\domains\pricer.loc\dup-installer\classes\class.installer.state.php[103]
+	TRACE:
+#0 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.params.php(153): DUPX_InstallerState->checkState()
+#1 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.ajax.php(177): DUPX_Ctrl_Params::setParamsStep1()
+#2 E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\classes\class.ctrl.ajax.php(92): DUPX_Ctrl_ajax::actions()
+#3 E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php(56): DUPX_Ctrl_ajax::controller()
+#4 {main}
+
+-----------------------
+[WARNING] wp-config.php exists but isn't valid. Continue on standard install.
+	LONG MSG: Exception message: wp-config.php exists but database data connection isn't valid. Continuing with standard install
+
+
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+INITIALIZE FILTERS
+--------------------------------------
+PATHS MAPPING : "E:/OpenServer/domains/pricer.loc"
+--------------------------------------
+********************************************************************************
+* DUPLICATOR LITE: Install-Log
+* STEP-1 START @ 05:56:43
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+INSTALL TYPE________: single site
+BLOG NAME___________: "Pricer24"
+HOME URL NEW________: "http://pricer.loc"
+SITE URL NEW________: "http://pricer.loc/"
+CONTENT URL NEW_____: "http://pricer.loc/wp-content"
+UPLOAD URL NEW______: "http://pricer.loc/wp-content/uploads"
+PLUGINS URL NEW_____: "http://pricer.loc/wp-content/plugins"
+MUPLUGINS URL NEW___: "http://pricer.loc/wp-content/mu-plugins"
+HOME PATH NEW_______: "E:/OpenServer/domains/pricer.loc"
+SITE PATH NEW_______: "E:/OpenServer/domains/pricer.loc/"
+CONTENT PATH NEW____: "E:/OpenServer/domains/pricer.loc/wp-content"
+UPLOAD PATH NEW_____: "E:/OpenServer/domains/pricer.loc/wp-content/uploads"
+PLUGINS PATH NEW____: "E:/OpenServer/domains/pricer.loc/wp-content/plugins"
+MUPLUGINS PATH NEW__: "E:/OpenServer/domains/pricer.loc/wp-content/mu-plugins"
+ARCHIVE ACTION______: "donothing"
+SKIP WP FILES_______: "none"
+ARCHIVE ENGINE______: "ziparchivechunking"
+SET DIR PERMS_______: false
+DIR PERMS VALUE_____: 0755
+SET FILE PERMS______: false
+FILE PERMS VALUE____: 0644
+SAFE MODE___________: 0
+LOGGING_____________: 1
+ZIP THROTTLING______: false
+WP CONFIG___________: "modify"
+HTACCESS CONFIG_____: "new"
+OTHER CONFIG________: "new"
+FILE TIME___________: "current"
+********************************************************************************
+
+REMOVE FILTERS
+	DIR : "E:/OpenServer/domains/pricer.loc/dup-installer"
+	FILE: "E:/OpenServer/domains/pricer.loc/202302095_pricer_[HASH]_20230303193247_installer-backup.php"
+	FILE: "E:/OpenServer/domains/pricer.loc/202302095_pricer_[HASH]_20230303193247_archive.zip"
+	FILE: "E:/OpenServer/domains/pricer.loc/installer.php"
+	FILE: "E:/OpenServer/domains/pricer.loc/dup-installer-bootlog__e8356ee-03193247.txt"
+EXTRACTION FILTERS
+	DIR : "dup-installer"
+	FILE: "202302095_pricer_[HASH]_20230303193247_installer-backup.php"
+--------------------------------------
+
+
+EXTRACTION: ZIP CHUNKING >>> START
+MAINTENANCE MODE ENABLE
+BEFORE EXTRACION ACTIONS
+EXPORT DB ONLY CHECKS
+
+*** RESET CONFIG FILES IN CURRENT HOSTING >>> START
+RESET CONFIG FILES: I'M GOING TO MOVE CONFIG FILE "wp-config.php" IN ORIGINAL FOLDER
+	CONFIG FILE HAS BEEN RESET
+RESET CONFIG FILES: I'M GOING TO MOVE CONFIG FILE ".htaccess" IN ORIGINAL FOLDER
+	CONFIG FILE HAS BEEN RESET
+
+*** RESET CONFIG FILES IN CURRENT HOSTING >>> END
+MAINTENANCE MODE ENABLE
+
+*** CREATE FOLDER AND PERMISSION PREPARE
+FOLDER PREPARE DONE
+ARCHIVE OFFSET 0
+FILE EXTRACTION: done processing last file in list of 600
+
+EXTRACTION: ZIP CHUNKING >>> DONE
+
+EXTRACTION COMPLETE @ 05:56:43 - RUNTIME: 1.2222 sec. - Files processed: 0 of 0
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+ADD PREFIX META MAP ID 0 wp_
+
+
+
+********************************************************************************
+* DUPLICATOR LITE: INSTALL-LOG
+* STEP-2 START @ 05:56:43
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+DB ENGINE___________: "chunk"
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+USER MODE___________: "overwrite"
+TABLE PREFIX________: "wp_"
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8mb4"
+COLLATE_____________: ""
+CUNKING_____________: true
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+FUNCTIONS___________: true
+REMOVE DEFINER______: false
+SPLIT CREATES_______: true
+--------------------------------------
+TABLES
+--------------------------------------
+TABLE "wp_actionscheduler_actions"______________________[ROWS:       7] [EXTRACT|REPLACE] [INST NAME: wp_actionscheduler_actions]
+TABLE "wp_actionscheduler_claims"_______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_actionscheduler_claims]
+TABLE "wp_actionscheduler_groups"_______________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: wp_actionscheduler_groups]
+TABLE "wp_actionscheduler_logs"_________________________[ROWS:       9] [EXTRACT|REPLACE] [INST NAME: wp_actionscheduler_logs]
+TABLE "wp_aioseo_cache"_________________________________[ROWS:       7] [EXTRACT|REPLACE] [INST NAME: wp_aioseo_cache]
+TABLE "wp_aioseo_notifications"_________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: wp_aioseo_notifications]
+TABLE "wp_aioseo_posts"_________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_aioseo_posts]
+TABLE "wp_commentmeta"__________________________________[ROWS:       4] [EXTRACT|REPLACE] [INST NAME: wp_commentmeta]
+TABLE "wp_comments"_____________________________________[ROWS:      28] [EXTRACT|REPLACE] [INST NAME: wp_comments]
+TABLE "wp_duplicator_packages"__________________________[ROWS:       3] [EXTRACT|REPLACE] [INST NAME: wp_duplicator_packages]
+TABLE "wp_links"________________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_links]
+TABLE "wp_options"______________________________________[ROWS:     597] [EXTRACT|REPLACE] [INST NAME: wp_options]
+TABLE "wp_postmeta"_____________________________________[ROWS:   81769] [EXTRACT|REPLACE] [INST NAME: wp_postmeta]
+TABLE "wp_posts"________________________________________[ROWS:    2183] [EXTRACT|REPLACE] [INST NAME: wp_posts]
+TABLE "wp_redirection_404"______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_redirection_404]
+TABLE "wp_redirection_groups"___________________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: wp_redirection_groups]
+TABLE "wp_redirection_items"____________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: wp_redirection_items]
+TABLE "wp_redirection_logs"_____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_redirection_logs]
+TABLE "wp_term_relationships"___________________________[ROWS:     826] [EXTRACT|REPLACE] [INST NAME: wp_term_relationships]
+TABLE "wp_term_taxonomy"________________________________[ROWS:      76] [EXTRACT|REPLACE] [INST NAME: wp_term_taxonomy]
+TABLE "wp_termmeta"_____________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_termmeta]
+TABLE "wp_terms"________________________________________[ROWS:      76] [EXTRACT|REPLACE] [INST NAME: wp_terms]
+TABLE "wp_usermeta"_____________________________________[ROWS:     180] [EXTRACT|REPLACE] [INST NAME: wp_usermeta]
+TABLE "wp_users"________________________________________[ROWS:       4] [EXTRACT|REPLACE] [INST NAME: wp_users]
+TABLE "wp_yoast_indexable"______________________________[ROWS:    1453] [EXTRACT|REPLACE] [INST NAME: wp_yoast_indexable]
+TABLE "wp_yoast_indexable_hierarchy"____________________[ROWS:     951] [EXTRACT|REPLACE] [INST NAME: wp_yoast_indexable_hierarchy]
+TABLE "wp_yoast_migrations"_____________________________[ROWS:      23] [EXTRACT|REPLACE] [INST NAME: wp_yoast_migrations]
+TABLE "wp_yoast_primary_term"___________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: wp_yoast_primary_term]
+TABLE "wp_yoast_seo_links"______________________________[ROWS:     412] [EXTRACT|REPLACE] [INST NAME: wp_yoast_seo_links]
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 8.0.19 -- Build Server: 8.0.32
+FILE SIZE:	dup-database__[HASH].sql (18.17MB)
+TIMEOUT:	5000
+MAXPACK:	268435456
+SQLMODE-GLOBAL:	ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+SQLMODE-SESSION:NO_AUTO_VALUE_ON_ZERO
+DROP ALL TABLES
+DROP TABLE wp_actionscheduler_actions
+DROP TABLE wp_actionscheduler_claims
+DROP TABLE wp_actionscheduler_groups
+DROP TABLE wp_actionscheduler_logs
+DROP TABLE wp_aioseo_cache
+DROP TABLE wp_aioseo_notifications
+DROP TABLE wp_aioseo_posts
+DROP TABLE wp_commentmeta
+DROP TABLE wp_comments
+DROP TABLE wp_duplicator_packages
+DROP TABLE wp_easywpsmtp_debug_events
+DROP TABLE wp_easywpsmtp_tasks_meta
+DROP TABLE wp_links
+DROP TABLE wp_options
+DROP TABLE wp_postmeta
+DROP TABLE wp_posts
+DROP TABLE wp_term_relationships
+DROP TABLE wp_term_taxonomy
+DROP TABLE wp_termmeta
+DROP TABLE wp_terms
+DROP TABLE wp_usermeta
+DROP TABLE wp_users
+DROP TABLE wp_yoast_indexable
+DROP TABLE wp_yoast_indexable_hierarchy
+DROP TABLE wp_yoast_migrations
+DROP TABLE wp_yoast_primary_term
+DROP TABLE wp_yoast_seo_links
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+QUERY FIXES
+GLOBAL RULES ADDED: PROC AND VIEWS
+GLOBAL RULES ADDED: INVALID CHARSETS
+GLOBAL RULES ADDED: INVALID COLLATIONS
+
+QUERY FIXES GLOBAL RULES
+	SEARCH  => /^(\s*(?:\/\*!\d+\s)?\s*(?:CREATE.+)?DEFINER\s*=)([^\*\s]+)(.*)$/m
+	REPLACE => $1`root`@`localhost`$3
+
+	SEARCH  => /^(\s*CREATE.+(?:PROCEDURE|FUNCTION)[\s\S]*)(BEGIN)([\s\S]*)$/
+	REPLACE => $1SQL SECURITY INVOKER
+$2$3
+
+	SEARCH  => /(^.*(?:CHARSET|CHARACTER SET)\s*[\s=]\s*[`'"]?)((?:utf8mb3))([`'"]?\s.*COLLATE\s*[\s=]\s*[`'"]?)([^`'"\s;]+)([`'"]?.*$)/m
+	REPLACE => $1utf8mb4$3utf8mb4_0900_ai_ci$5
+
+	SEARCH  => /(^.*COLLATE\s*[\s=]\s*[`'"]?)([^`'"\s;]+)([`'"]?\s.*(?:CHARSET|CHARACTER SET)\s*[\s=]\s*[`'"]?)((?:utf8mb3))([`'"]?[\s;].*$)/m
+	REPLACE => $1utf8mb4_0900_ai_ci$3utf8mb4$5
+
+	SEARCH  => /(^.*(?:CHARSET|CHARACTER SET)\s*[\s=]\s*[`'"]?)((?:utf8mb3))([`'"]?[\s;].*$)/m
+	REPLACE => $1utf8mb4$3
+
+	SEARCH  => /(^.*(?:CHARSET|CHARACTER SET)\s*[\s=]\s*[`'"]?)([^`'"\s;]+)([`'"]?\s.*COLLATE\s*[\s=]\s*[`'"]?)((?:utf8mb3_general_ci))([`'"]?[\s;].*$)/m
+	REPLACE => $1utf8mb4$3utf8mb4_0900_ai_ci$5
+
+	SEARCH  => /(^.*COLLATE\s*[\s=]\s*[`'"]?)((?:utf8mb3_general_ci))([`'"]?\s.*(?:CHARSET|CHARACTER SET)\s*[\s=]\s*[`'"]?)([^`'"\s;]+)([`'"]?.*$)/m
+	REPLACE => $1utf8mb4_0900_ai_ci$3utf8mb4$5
+
+	SEARCH  => /(^.*COLLATE\s*[\s=]\s*[`'"]?)((?:utf8mb3_general_ci))([`'"]?[\s;].*$)/m
+	REPLACE => $1utf8mb4_0900_ai_ci$3
+
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 0
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+DATABASE CHUNK: CREATION TABLE MARKER FOUND
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 847530
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 1113315
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 1400841
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 1585598
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 1857543
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 2081513
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 2277491
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 2470146
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 2679213
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 2947305
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 3222943
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 3485480
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 3768689
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 4042444
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 4263788
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 4488781
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 4737381
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 4987067
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 5269822
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 5500203
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 5785005
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 6057684
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 6350596
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 6608829
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 6874983
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 7136052
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 7392827
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 7591281
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 7839704
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 8111838
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 8401658
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 8677610
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 8973510
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 9236454
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 9500385
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 9737685
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 10133575
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 10527261
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 10836239
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 11071943
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 11429153
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 11815477
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 12187402
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 14901118
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 18010762
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 18927292
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+ERRORS FOUND:	0
+DROPPED TABLES:	27
+RENAMED TABLES:	0
+QUERIES RAN:	88692
+
+TABLES ROWS IN DATABASE AFTER EXTRACTION
+
+TABLE "wp_actionscheduler_actions"______________________[ROWS:     7]
+TABLE "wp_actionscheduler_claims"_______________________[ROWS:     0]
+TABLE "wp_actionscheduler_groups"_______________________[ROWS:     2]
+TABLE "wp_actionscheduler_logs"_________________________[ROWS:     9]
+TABLE "wp_aioseo_cache"_________________________________[ROWS:     7]
+TABLE "wp_aioseo_notifications"_________________________[ROWS:     1]
+TABLE "wp_aioseo_posts"_________________________________[ROWS:     0]
+TABLE "wp_commentmeta"__________________________________[ROWS:     4]
+TABLE "wp_comments"_____________________________________[ROWS:    28]
+TABLE "wp_duplicator_packages"__________________________[ROWS:     3]
+TABLE "wp_links"________________________________________[ROWS:     0]
+TABLE "wp_options"______________________________________[ROWS:   597]
+TABLE "wp_postmeta"_____________________________________[ROWS: 81769]
+TABLE "wp_posts"________________________________________[ROWS:  2183]
+TABLE "wp_redirection_404"______________________________[ROWS:     0]
+TABLE "wp_redirection_groups"___________________________[ROWS:     2]
+TABLE "wp_redirection_items"____________________________[ROWS:     1]
+TABLE "wp_redirection_logs"_____________________________[ROWS:     0]
+TABLE "wp_term_relationships"___________________________[ROWS:   826]
+TABLE "wp_term_taxonomy"________________________________[ROWS:    76]
+TABLE "wp_termmeta"_____________________________________[ROWS:     0]
+TABLE "wp_terms"________________________________________[ROWS:    76]
+TABLE "wp_usermeta"_____________________________________[ROWS:   180]
+TABLE "wp_users"________________________________________[ROWS:     4]
+TABLE "wp_yoast_indexable"______________________________[ROWS:  1453]
+TABLE "wp_yoast_indexable_hierarchy"____________________[ROWS:   951]
+TABLE "wp_yoast_migrations"_____________________________[ROWS:    23]
+TABLE "wp_yoast_primary_term"___________________________[ROWS:     0]
+TABLE "wp_yoast_seo_links"______________________________[ROWS:   412]
+
+INSERT DATA RUNTIME: 338.2448 sec.
+STEP-2 COMPLETE @ 06:02:21 - RUNTIME: 338.2450 sec.
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+
+====================================
+SET SEARCH AND REPLACE LIST INSTALL TYPE single site
+====================================
+SEARCH ITEM[T:path |P:12] SEARCH: /var/www/vhost/pricer24.com REPLACE: E:/OpenServer/domains/pricer.loc/ [SCOPE: ALL]
+SEARCH ITEM[T:path |P:12] SEARCH: /var/www/vhost/pricer24.com REPLACE: E:/OpenServer/domains/pricer.loc [SCOPE: ALL]
+SEARCH ITEM[T:urlnd|P:12] SEARCH: https://pricer24.com REPLACE: http://pricer.loc/ [SCOPE: ALL]
+SEARCH ITEM[T:urlnd|P:12] SEARCH: https://pricer24.com REPLACE: http://pricer.loc [SCOPE: ALL]
+CHUNK LOAD DATA: IS NULL 
+CHUNK ACTION: CURRENT [start][][]
+
+
+********************************************************************************
+DUPLICATOR LITE: INSTALL-LOG
+STEP-3 START @ 06:02:23
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8mb4"
+CHARSET CLIENT:	"utf8mb4"
+********************************************************************************
+OPTIONS:
+DISALLOW_FILE_EDIT____: [value = ], [inWpConfig = ]
+DISALLOW_FILE_MODS____: [value = ], [inWpConfig = ]
+AUTOSAVE_INTERVAL_____: [value = 60], [inWpConfig = ]
+WP_POST_REVISIONS_____: [value = 1], [inWpConfig = ]
+FORCE_SSL_ADMIN_______: [value = ], [inWpConfig = 1]
+WP_AUTO_UPDATE_CORE___: [value = false], [inWpConfig = ]
+WP_CACHE______________: [value = ], [inWpConfig = ]
+WPCACHEHOME___________: [value = /], [inWpConfig = ]
+WP_DEBUG______________: [value = ], [inWpConfig = 1]
+WP_DEBUG_LOG__________: [value = ], [inWpConfig = ]
+WP_DEBUG_DISPLAY______: [value = 1], [inWpConfig = ]
+WP_DISABLE_FATAL_ERROR_HANDLER: [value = ], [inWpConfig = ]
+SCRIPT_DEBUG__________: [value = ], [inWpConfig = ]
+CONCATENATE_SCRIPTS___: [value = ], [inWpConfig = ]
+SAVEQUERIES___________: [value = ], [inWpConfig = ]
+ALTERNATE_WP_CRON_____: [value = ], [inWpConfig = ]
+DISABLE_WP_CRON_______: [value = ], [inWpConfig = ]
+WP_CRON_LOCK_TIMEOUT__: [value = 60], [inWpConfig = ]
+COOKIE_DOMAIN_________: [value = ], [inWpConfig = ]
+WP_MEMORY_LIMIT_______: [value = 256M], [inWpConfig = ]
+WP_MAX_MEMORY_LIMIT___: [value = 256M], [inWpConfig = ]
+WP_TEMP_DIR___________: [value = ], [inWpConfig = ]
+********************************************************************************
+
+********************************************************************************
+CHUNK PARAMS:
+maxIteration__________: 0
+timeOut_______________: 5000
+throttling____________: 2
+rowsPerPage___________: 1000
+********************************************************************************
+
+CHUNK ACTION: CURRENT [cleanup_trans][][]
+CLEAN OPTIONS [wp_options]
+	`option_name` LIKE "\_transient%"
+	`option_name` LIKE "\_site\_transient%"
+	`option_name` IN ("duplicator_ui_view_state","duplicator_package_active","duplicator_settings","duplicator_is_pro_enable_notice_dismissed")
+DATABASE OPTIONS DELETED [ROWS:    51]
+CHUNK ACTION: CURRENT [cleanup_extra][][]
+CLEANUP EXTRA
+	- SKIP DROP VIEWS
+	- SKIP DROP PROCS
+	- SKIP DROP FUNCS
+CHUNK ACTION: CURRENT [cleanup_packages][][]
+EMPTY PACKAGES TABLE
+CLEAN PACKAGES
+DATABASE PACKAGE DELETED [ROWS:     3]
+CHUNK ACTION: CURRENT [init][][]
+
+EVALUATE TABLE: "wp_actionscheduler_actions"______________________[ROWS:     7][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_actionscheduler_actions][0]
+
+EVALUATE TABLE: "wp_actionscheduler_claims"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_actionscheduler_groups"_______________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_actionscheduler_groups][0]
+
+EVALUATE TABLE: "wp_actionscheduler_logs"_________________________[ROWS:     9][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_actionscheduler_logs][0]
+
+EVALUATE TABLE: "wp_aioseo_cache"_________________________________[ROWS:     7][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_aioseo_cache][0]
+
+EVALUATE TABLE: "wp_aioseo_notifications"_________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_aioseo_notifications][0]
+
+EVALUATE TABLE: "wp_aioseo_posts"_________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_commentmeta][0]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:    28][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_comments][0]
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   546][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_options][0]
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS: 81769][PG:  82][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][0]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][1]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][2]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][3]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][4]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][5]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][6]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][7]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][8]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][9]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][10]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][11]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][12]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][13]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][14]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][15]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][16]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][17]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][18]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][19]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][20]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][21]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][22]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][23]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][24]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][25]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][26]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][27]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][28]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][29]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][30]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][31]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][32]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][33]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][34]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][35]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][36]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][37]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][38]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][39]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][40]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][41]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][42]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][43]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][44]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][45]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][46]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][47]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][48]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][49]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][50]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][51]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][52]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][53]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][54]
+	CHUNK ACTION: CURRENT [search_replace][wp_postmeta][55]
+	
+STEP-3 CHUNK STOP @ 06:02:26 - RUNTIME: 5.0061 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][56]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][57]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][58]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][59]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][60]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][61]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][62]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][63]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][64]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][65]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][66]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][67]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][68]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][69]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][70]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][71]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][72]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][73]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][74]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][75]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][76]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][77]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][78]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][79]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][80]
+CHUNK ACTION: CURRENT [search_replace][wp_postmeta][81]
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:  2183][PG:   3][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_posts][0]
+	
+STEP-3 CHUNK STOP @ 06:02:34 - RUNTIME: 7.4966 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][wp_posts][1]
+
+STEP-3 CHUNK STOP @ 06:02:39 - RUNTIME: 5.1606 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][wp_posts][2]
+
+EVALUATE TABLE: "wp_redirection_404"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_redirection_groups"___________________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_redirection_groups][0]
+
+EVALUATE TABLE: "wp_redirection_items"____________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_redirection_items][0]
+
+EVALUATE TABLE: "wp_redirection_logs"_____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:   826][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:    76][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_term_taxonomy][0]
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:    76][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_terms][0]
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:   180][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_usermeta][0]
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     4][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_users][0]
+
+EVALUATE TABLE: "wp_yoast_indexable"______________________________[ROWS:  1453][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_yoast_indexable][0]
+	
+STEP-3 CHUNK STOP @ 06:02:45 - RUNTIME: 5.5026 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][wp_yoast_indexable][1]
+
+EVALUATE TABLE: "wp_yoast_indexable_hierarchy"____________________[ROWS:   951][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_yoast_migrations"_____________________________[ROWS:    23][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_yoast_migrations][0]
+
+EVALUATE TABLE: "wp_yoast_primary_term"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_yoast_seo_links"______________________________[ROWS:   412][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhost/pricer24.com" =====================> "E:/OpenServer/domains/pricer.loc"
+	SEARCH[urlnd]  2:"https://pricer24.com" ============================> "http://pricer.loc"
+	CHUNK ACTION: CURRENT [search_replace][wp_yoast_seo_links][0]
+--------------------------------------
+SCANNED:	Tables:29 	|	 Rows:86783 	|	 Cells:462199 
+UPDATED:	Tables:8 	|	 Rows:5193 	|	 Cells:6680 
+ERRORS:		0 
+RUNTIME:	25.838800 sec
+CHUNK ACTION: CURRENT [rem_maintenance][][]
+
+====================================
+REMOVE MAINTENANCE MODE
+====================================
+MAINTENANCE MODE DISABLE
+CHUNK ACTION: CURRENT [config_update][][]
+SET CONFIG FILES
+Retained original entry wpconfig target:E:/OpenServer/domains/pricer.loc/wp-config.php
+New htaccess file created:E:/OpenServer/domains/pricer.loc/.htaccess
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE ABSPATH "dirname(__FILE__) . '/'"
+	UPDATE WP_HOME "http://pricer.loc"
+	UPDATE WP_SITEURL "http://pricer.loc/"
+	UPDATE DB_NAME ""pricer_new""
+	UPDATE DB_USER "** OBSCURED **"
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	UPDATE DB_CHARSET "utf8mb4"
+	UPDATE DB_COLLATE ""
+	WP CONFIG UPDATE FORCE_SSL_ADMIN "false"
+	WP CONFIG UPDATE WP_DEBUG "false"
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE
+====================================
+
+WEB SERVER CONFIGURATION FILE UPDATED:
+- Preparing .htaccess file with basic setup.
+HTACCESS FILE - Successfully updated the .htaccess file setting.
+
+====================================
+INDEX.PHP UPDATE
+====================================
+INDEX.PHP updated with new blog header "dirname(__FILE__) . '/wp-blog-header.php'"
+
+CHUNK ACTION: CURRENT [gen_update][][]
+
+====================================
+GENERAL UPDATES
+====================================
+
+====================================
+MANAGE PLUGINS
+====================================
+Activated plugins listed here will be deactivated: Array
+(
+)
+
+CHUNK ACTION: CURRENT [gen_clean][][]
+
+====================================
+GENERAL CLEANUP
+====================================
+RESET ALL USERS SESSION TOKENS
+MIGRATION INFO SET
+CHUNK ACTION: CURRENT [create_admin][][]
+
+====================================
+RESET USERS PASSWORD
+====================================
+CHUNK ACTION: CURRENT [notice_test][][]
+
+====================================
+CHECK FOR INDEX.HTML
+====================================
+NO INDEX.HTML WAS FOUND
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+CHUNK ACTION: CURRENT [cleanup_tmp_files][][]
+
+====================================
+CLEANUP TMP FILES
+====================================
+CHUNK ACTION: CURRENT [set_files_perms][][]
+
+====================================
+SET PARAMS PERMISSION
+====================================
+\n SKIP FOLDER PERMISSION AFTER EXTRACTION
+CHUNK ACTION: CURRENT [final_report][][]
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 06:02:49 - RUNTIME: 4.3728 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [finalpre] START
+AJAX ACTION [finalpre] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+
+-------------------------
+AJAX ACTION [finalafter] START
+AJAX ACTION [finalafter] SUCCESS
+-------------------------
+
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\src\Core\Bootstrap.php:72] RESET TIME
+[PHP ERR][E_NOTICE] MSG:ob_end_clean(): failed to delete buffer. No buffer to delete [CODE:8|FILE:E:\OpenServer\domains\pricer.loc\dup-installer\main.installer.php|LINE:84]
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[WARNING] FORCE_SSL_ADMIN was enabled on none SSL
+	SECTIONS: general
+	LONG MSG: It was found that FORCE_SSL_ADMIN is enabled and you are installing on a site without SSL, so that config has been disabled.
+
+-----------------------
+[NOTICE] Warnings or notices on WordPress front-end tests!
+	SECTIONS: general
+	LONG MSG: SCRIPT FILE TEST: E:/OpenServer/domains/pricer.loc/index.php
+E_NOTICE Undefined index: HTTP_X_FORWARDED_PROTO
+	FILE: E:\OpenServer\domains\pricer.loc\wp-config.php[42]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-load.php[50]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-blog-header.php[13]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\index.php[17]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+E_NOTICE Undefined offset: 7
+	FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\header.php[89]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[770]
+	FUNCTION: load_template                 FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[716]
+	FUNCTION: locate_template               FILE: E:\OpenServer\domains\pricer.loc\wp-includes\general-template.php[48]
+	FUNCTION: get_header                    FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\front-page.php[1]
+	FUNCTION: include                       FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template-loader.php[106]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-blog-header.php[19]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\index.php[17]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+E_NOTICE Trying to get property 'menu_item_parent' of non-object
+	FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\header.php[89]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[770]
+	FUNCTION: load_template                 FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[716]
+	FUNCTION: locate_template               FILE: E:\OpenServer\domains\pricer.loc\wp-includes\general-template.php[48]
+	FUNCTION: get_header                    FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\front-page.php[1]
+	FUNCTION: include                       FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template-loader.php[106]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-blog-header.php[19]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\index.php[17]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+E_NOTICE Undefined offset: 7
+	FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\header.php[95]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[770]
+	FUNCTION: load_template                 FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[716]
+	FUNCTION: locate_template               FILE: E:\OpenServer\domains\pricer.loc\wp-includes\general-template.php[48]
+	FUNCTION: get_header                    FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\front-page.php[1]
+	FUNCTION: include                       FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template-loader.php[106]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-blog-header.php[19]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\index.php[17]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+E_NOTICE Trying to get property 'menu_item_parent' of non-object
+	FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\header.php[95]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[770]
+	FUNCTION: load_template                 FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template.php[716]
+	FUNCTION: locate_template               FILE: E:\OpenServer\domains\pricer.loc\wp-includes\general-template.php[48]
+	FUNCTION: get_header                    FILE: E:\OpenServer\domains\pricer.loc\wp-content\themes\pricer\front-page.php[1]
+	FUNCTION: include                       FILE: E:\OpenServer\domains\pricer.loc\wp-includes\template-loader.php[106]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-blog-header.php[19]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\index.php[17]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+
+
+-----------------------
+[NOTICE] Warnings or notices on WordPress backend tests!
+	SECTIONS: general
+	LONG MSG: SCRIPT FILE TEST: E:/OpenServer/domains/pricer.loc//wp-login.php
+E_NOTICE Undefined index: HTTP_X_FORWARDED_PROTO
+	FILE: E:\OpenServer\domains\pricer.loc\wp-config.php[42]
+	--- TRACE ---
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-load.php[50]
+	FUNCTION: require                       FILE: E:\OpenServer\domains\pricer.loc\wp-login.php[12]
+	FUNCTION: require_once                  FILE: E:\OpenServer\domains\pricer.loc\wp-content\wp_test_script_e8356ee-03193247.php[96]
+-----
+For solutions to these issues see the online FAQs 
+https://snapcreek.com/duplicator/docs 
+
+
+====================================
+LOG-TIME[E:\OpenServer\domains\pricer.loc\dup-installer\ctrls\ctrl.base.php:227][DELTA:   0.11970]  MESSAGE:END RENDER PAGE

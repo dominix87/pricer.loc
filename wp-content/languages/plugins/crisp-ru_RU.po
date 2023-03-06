@@ -1,0 +1,33 @@
+# Translation of Plugins - Crisp &#8211; Live Chat and Chatbot - Development (trunk) in Russian
+# This file is distributed under the same license as the Plugins - Crisp &#8211; Live Chat and Chatbot - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-11-06 12:31:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Crisp &#8211; Live Chat and Chatbot - Development (trunk)\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+msgid "Crisp"
+msgstr "Crisp"
+
+#: crisp.php:18 crisp.php:19
+msgid "Crisp Settings"
+msgstr "Настройки Crisp"
+
+#. Plugin URI of the plugin
+msgid "http://wordpress.org/plugins/crisp/"
+msgstr "http://wordpress.org/plugins/crisp/"
+
+#. Author URI of the plugin
+msgid "https://crisp.chat"
+msgstr "https://crisp.chat"
+
+#. Description of the plugin
+msgid "Crisp is a Livechat plugin"
+msgstr "Crisp - это плагин чата в реальном времени"

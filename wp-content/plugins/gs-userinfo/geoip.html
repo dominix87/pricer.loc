@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Redirect by locale and geoip</title>
+</head>
+<body>
+
+<script>
+    function setCookie(name, value, options = {}) {
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+        }
+        document.cookie = updatedCookie;
+    }
+
+    function geoip(json) {
+
+        var redirect_exists = document.cookie.indexOf('gs-country-redirect-session=')
+
+        // Check exists current session redirect
+        if (redirect_exists == -1) {
+
+            var sUsrAg = navigator.userAgent.toString();
+
+            // If bot skip code
+            if (
+                (sUsrAg.indexOf('bot') == -1) &
+                (sUsrAg.indexOf('crawl') == -1) &
+                (sUsrAg.indexOf('slurp') == -1) &
+                (sUsrAg.indexOf('spider') == -1) &
+                (sUsrAg.indexOf('mediapartners') == -1) &
+                (sUsrAg.length > 10)
+            ) {
+                // Set cookie that redirect code was loaded
+                console.log("set loaded cookie");
+//                setCookie('gs-country-redirect-session', true, {path: '/'});
+
+
+                // backend load existed language pages
+                var links = new Map();
+                links.set('uk', 'ukraine-link');
+                links.set('en', 'english-link');
+                links.set('ru', 'russian-link');
+
+                if (links.size > 1) {
+                    // backend load current language
+                    var lang = "ru";
+
+                    // Search link by local
+                    var sLangs = navigator.languages;
+                    var langLink;
+                    var langCode;
+                    var langCodeSwitch;
+                    sLangs.forEach(function (sLang) {
+                        langCode = sLang.split('-');
+                        if (!langLink) {
+                            if (links.has(langCode[0])) {
+                                langLink = links.get(langCode[0]);
+                                langCodeSwitch = langCode[0];
+                            }
+                        }
+                    });
+
+                    console.log(langLink);
+                    console.log(langCodeSwitch);
+
+                    // Check country by IP
+                    var country = json.country_code;
+
+                    // Check ukraine zone -> ukraine page
+                    if ((lang != "uk") & (country == "UA") & (links.has("uk"))) {
+                        langLink = links.get("uk");
+                        langCodeSwitch = "uk";
+                    }
+
+                    console.log(langLink);
+                    console.log(langCodeSwitch);
+
+                    if (lang != langCodeSwitch) {
+                        console.log("redirect to " + langLink);
+                        // window.location.href = langLink;
+                    }
+                }
+            }
+        }
+
+    }
+
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
+
+</body>
+</html>

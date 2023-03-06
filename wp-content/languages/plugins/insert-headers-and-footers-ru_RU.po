@@ -1,0 +1,43 @@
+# Translation of Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-10-26 16:21:27+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release)\n"
+
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:111
+#: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:135
+msgid "Sorry, you only have read-only access to this page. Ask your administrator for assistance editing."
+msgstr "У вас есть доступ только для чтения к этой странице. Обратитесь к администратору за помощью в редактировании."
+
+#. translators: %s: The `</body>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:147
+msgid "These scripts will be printed above the closing %s tag."
+msgstr "Эти скрипты будут выведены над закрывающим тегом %s."
+
+#. translators: %s: The `<head>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:137
+msgid "These scripts will be printed in the %s section."
+msgstr "Эти скрипты будут выведены в разделе %s."
+
+#. translators: %s: The `<head>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:142
+msgid "These scripts will be printed just below the opening %s tag."
+msgstr "Эти скрипты будут выведены сразу под открывающим тегом %s."
+
+#: includes/admin/class-wpcode-admin-page-loader.php:171
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:38
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:132
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:276
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:172
+msgid "Settings Saved."
+msgstr "Настройки сохранены."
