@@ -191,6 +191,62 @@ function pricer_styles(){
 add_action( 'wp_enqueue_scripts', 'pricer_scripts' );
 add_action( 'wp_enqueue_scripts', 'pricer_styles' );
 
+
+
+function pricer_polylang_strings(){
+  if( ! function_exists( 'pll_register_string' ) ) {
+    return;
+  }
+
+  pll_register_string(
+    'header_btn', // название строки
+    'Получить демо', // сама строка
+    'Small translates', // категория для удобства
+    false // будут ли тут переносы строк в тексте или нет
+  );
+
+  pll_register_string('footer_callBack_btn', 'Перезвоните мне', 'Small translates', false);
+  pll_register_string('footer_bottom_title1', 'Заголовок 1', 'Small translates', false);
+  pll_register_string('footer_bottom_title2', 'Заголовок 2', 'Small translates', false);
+  pll_register_string('footer_bottom_title3', 'Заголовок 3', 'Small translates', false);
+  pll_register_string('footer_bottom_title4', 'Заголовок 4', 'Small translates', false);
+  pll_register_string('footer_bottom_title5', 'Заголовок 5', 'Small translates', false);
+  pll_register_string('footer_bottom_title6', 'Заголовок 6', 'Small translates', false);
+  pll_register_string('btn_text_1', 'Запрос демо', 'Small translates', false);
+  pll_register_string('btn_text_2', 'Все возможности', 'Small translates', false);
+  pll_register_string('btn_text_3', 'Получить консультацию', 'Small translates', false);
+  pll_register_string('btn_text_play', 'Текст кнопки play', 'Small translates', false);
+  pll_register_string('btn_text_4', 'Хотим так же', 'Small translates', false);
+  pll_register_string('btn_text_5', 'Ознакомиться с кейсом', 'Small translates', false);
+  pll_register_string('btn_text_6', 'Подробнее', 'Small translates', false);
+  pll_register_string('btn_text_7', 'О нас', 'Small translates', false);
+  pll_register_string('btn_text_8', 'Получить демо', 'Small translates', false);
+  pll_register_string('btn_text_9', 'Консультация менеджера', 'Small translates', false);
+  pll_register_string('simple_text_1', 'Пример использования', 'Small translates', false);
+  pll_register_string('simple_text_2', 'Показать полностью', 'Small translates', false);
+  pll_register_string('simple_text_3', 'След', 'Small translates', false);
+  pll_register_string('simple_text_4', 'Пред', 'Small translates', false);
+
+
+}
+
+add_action( 'init', 'pricer_polylang_strings' );
+
+
+if( ! function_exists( 'pll__' ) ) {
+  function pll__( $string ) {
+    return $string;
+  }
+}
+
+if( ! function_exists( 'pll_e' ) ) {
+  function pll_e( $string ) {
+    echo $string;
+  }
+}
+
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -221,7 +277,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * disable admin bar on frontend.
  */
-//show_admin_bar(false);
+show_admin_bar(false);
 
 
 

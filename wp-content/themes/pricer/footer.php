@@ -12,47 +12,22 @@
 ?>
 </main>
 <footer>
-  <div class="footerTop">
+  <div class="firstLevel">
+    <div class="siteWidth">
+      <div class="textBlock">
+        <h3>Get <span>expert</span> advice</h3>
+        <div class="description">Submit your application to see the demo and make sure that the service fits your needs</div>
+        <div class="btnWrap">
+          <a href="#mainForm" class="btn" onclick="Index.changeSubject('Получить демо')" data-fancybox><?php pll_e('Получить демо')?></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="secondLevel">
     <div class="siteWidth">
       <div class="innerWrapper">
-        <div class="logoBlock">
-          <a href="<?php echo home_url('/');?>">
-            <img src="<?php the_field('footer_logo', 'option')?>" alt="">
-          </a>
-            <?php
-            echo do_shortcode('[cf7form cf7key="subscribe-form"]');
-            ?>
-
-            <?php /*  ?>
-          <div class="phoneBlock">
-            <a href="tel:<?php echo str_replace(array(' ',')','('), array('','',''), get_field('phone', 'option'))?>"><?php the_field('phone', 'option')?></a>
-            <a class="spec" href="#mainForm" data-fancybox onclick="Index.changeSubject('<?php pll_e('Перезвоните мне'); ?>')"><?php pll_e('Перезвоните мне')?></a></div>
-          <div class="socialsBlock">
-            <?php if(get_field('telegram_link', 'option')) : ?>
-            <a class="telegram" href="<?php the_field('telegram_link', 'option')?>" rel="nofollow" target="_blank">
-              <svg class="icon icon-telegram ">
-                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#telegram"></use>
-              </svg>
-            </a>
-            <?php endif;?>
-            <?php if(get_field('viber_link', 'option')) : ?>
-            <a class="viber" href="<?php the_field('viber_link', 'option')?>" rel="nofollow" target="_blank">
-              <svg class="icon icon-viber ">
-                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#viber"></use>
-              </svg>
-            </a>
-            <?php endif;?>
-            <?php if(get_field('messenger_link', 'option')) : ?>
-            <a class="messenger" href="<?php the_field('messenger_link', 'option')?>" rel="nofollow" target="_blank">
-              <svg class="icon icon-messenger ">
-                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#messenger"></use>
-              </svg>
-            </a>
-            <?php endif;?>
-          </div>
-            <?php /* */ ?>
-        </div>
-        <div class="footerElement menuBlock">
+        <div class="gloryText">🇺🇦 Glory To Ukraine!</div>
+        <div class="footerColumn">
           <div class="listTitle"><?php pll_e('Заголовок 1'); ?></div>
           <ul>
             <?php
@@ -83,7 +58,7 @@
             ?>
           </ul>
         </div>
-        <div class="footerElement decisionBlock">
+        <div class="footerColumn">
           <div class="listTitle"><?php pll_e('Заголовок 2'); ?></div>
           <ul>
             <?php
@@ -114,7 +89,7 @@
             ?>
           </ul>
         </div>
-        <div class="footerElement politicsBlock">
+        <div class="footerColumn">
           <div class="listTitle"><?php pll_e('Заголовок 3'); ?></div>
           <ul>
             <?php
@@ -143,29 +118,35 @@
               }
             endif;
             ?>
-
           </ul>
-            <?php
-            $lang = pll_current_language('slug');
-            if ($lang == "en") {
-                wp_nav_menu( [
-                    'menu'            => '53',
-                    'menu_class'           => 'footer_phones'
-                ] );
-            }
-            else {
-                wp_nav_menu( [
-                    'menu'            => '54',
-                    'menu_class'           => 'footer_phones'
-                ] );
-            }
-
-            ?>
+        </div>
+        <div class="footerColumn contactsColumn">
+          <div class="listTitle"><?php pll_e('Заголовок 4'); ?></div>
+          <div class="socialsBlock">
+            <a href="#">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/facebook_footer_icon.png" alt="">
+              <span>Facebook</span>
+            </a>
+            <a href="#">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/linkedin_footer_icon.png" alt="">
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <div class="listTitle"><?php pll_e('Заголовок 5'); ?></div>
+          <div class="emailBlock">
+            <a href="mailto:hello@pricer24.com">hello@pricer24.com</a>
+          </div>
+          <div class="listTitle"><?php pll_e('Заголовок 6'); ?></div>
+          <div class="phoneBlock">
+            <a href=""></a>
+            <a href="tel:+442038070277">+44 203 807 0277</a>
+            <a href="tel:+380442994839">+380 44 299 4839</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="footerBottom">
+  <div class="thirdLevel">
     <div class="siteWidth">
       <div class="innerWrapper">
         <div class="copyright"><?php the_field('copyright', 'option')?></div>

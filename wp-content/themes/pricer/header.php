@@ -21,7 +21,7 @@
 <!--      location = 'https://pricer24.com/success/';-->
 <!--    }, false );-->
 <!--  </script>-->
-
+  <?php $translations = pll_the_languages( array( 'raw' => 1 ) ); ?>
 
 	<?php wp_head(); ?>
 </head>
@@ -31,127 +31,115 @@
 
 
 <header class="white">
-  <div class="siteWidth container-fluid">
+  <div class="siteWidth">
     <div class="innerWrapper">
       <a class="logo" href="<?php echo home_url('/');?>">
         <img src="<?php the_field('header_logo', 'option')?>" alt="">
       </a>
       <nav class="navigation" id="mobMenu">
-        <ul>
-          <li class="mobile">
-            <a class="logo" href="<?php echo home_url('/');?>">
-              <img src="<?php the_field('header_logo', 'option')?>" alt="">
-            </a>
-          </li>
+        <div class="menuWrapper">
+          <ul class="mainMenu">
           <?php
           if( has_nav_menu( 'header_menu' ) ) :
 
-            $locations = get_nav_menu_locations();
-            $menuId = $locations['header_menu'];
+          $locations = get_nav_menu_locations();
+          $menuId = $locations['header_menu'];
 
-            $header_menu_items = wp_get_nav_menu_items( $menuId, [
-              'output_key'  => 'menu_order',
-            ] );
+          $header_menu_items = wp_get_nav_menu_items( $menuId, [
+          'output_key'  => 'menu_order',
+          ] );
 
-            $count = 0;
-            $submenu = false;
+          $header_menu = [];
 
-            foreach( $header_menu_items as $item ):
+          foreach ( $header_menu_items as $item ) {
+          $header_menu[] = [
+            'title' => $item->title,
+            'url' => $item->url,
+            ];
+          }
 
-              $link = $item->url;
-              $title = $item->title;
-              // item does not have a parent so menu_item_parent equals 0 (false)
-              if ( !$item->menu_item_parent ):
+          $markup = null;
 
-                // save this id for later comparison with sub-menu items
-                $parent_id = $item->ID; ?>
+          if(have_rows('item_template_markup', 'option')):
+            while(have_rows('item_template_markup','option')): the_row();
+              $markup[] = get_sub_field('markup');
+            endwhile;
+          endif;
 
-
+          $counter = 0;
+          foreach ( $header_menu as $menu_item ) {
+            if($menu_item['url'] === '#'):?>
+              <?php if($markup[$counter]):?>
                 <li class="parent">
-                <?php if($link != '#'): ?>
-
-                  <a href="<?php echo $link; ?>"><?php echo $title; ?></a>
-                <?php else: ?>
-
-                  <span class="itemTitle"><?php echo $title; ?></span>
-                <?php endif; ?>
-
-
-              <?php endif; ?>
-
-              <?php if ( $parent_id == $item->menu_item_parent ): ?>
-
-              <?php if ( !$submenu ): $submenu = true; ?>
-                <span class="toggleChild"></span>
-                <ul class="child">
-              <?php endif; ?>
-                  <li><a href="<?php echo $link; ?>"><?php echo $title; ?></a></li>
-              <?php if ( $header_menu_items[ $count + 1 ]->menu_item_parent != $parent_id && $submenu ): ?>
-                </ul>
-                <?php $submenu = false; endif; ?>
-
-            <?php endif; ?>
-
-              <?php if ( $header_menu_items[ $count + 1 ]->menu_item_parent != $parent_id ): ?>
+                  <span class="menuSwitcher" data-menuid="sub_menu_<?php echo $counter; ?>"><?php echo $menu_item['title']; ?></span>
+                  <div class="subMenu" id="sub_menu_<?php echo $counter; ?>">
+                    <div class="subMenuWrapper">
+                      <?php echo $markup[$counter];?>
+                    </div>
+                  </div>
+                </li>
+              <?php else:?>
+                <li><span><?php echo $menu_item['title']; ?></span></li>
+              <?php endif;?>
+            <?php else: ?>
+              <li><a href="<?php echo $menu_item['url']; ?>"><?php echo $menu_item['title']; ?></a></li>
+            <?php endif;
+            $counter++;
+          }
+          endif;
+          ?>
+          </ul>
+          <div class="socialsBlock">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/facebook_icon.png" alt="">
+                </a>
               </li>
-              <?php $submenu = false; endif; ?>
-
-              <?php $count++; endforeach;
-          endif; ?>
-
-
-          <li class="mobile btnLine">
-            <a class="enterBtn"  href="#mainForm" onclick="Index.changeSubject('Получить демо')" data-fancybox><?php the_field('header_btn_text', 'option')?></a>
-          </li>
-          <li class="mobile">
-            <?php $translations = pll_the_languages( array( 'raw' => 1 ) );
-            ?>
-            <div class="langBlock">
-              <?php foreach($translations as $lang):
-              if ($lang['current_lang'] == $lang): ?>
-              <button><?php echo $lang['name']; ?></button>
-              <?php endif;
-              endforeach; ?>
-              <div class="langList">
-                <?php foreach($translations as $lang):
-                  if ($lang['current_lang'] != $lang): ?>
-                <a href="<?php echo $lang['url'] ?>"><?php echo $lang['name']; ?></a>
-                <?php endif;
-                endforeach; ?>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-        <button class="closeMenu" onclick="Index.closeMenu();">
-          <svg class="icon icon-closeModal ">
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#closeModal"></use>
-          </svg>
-        </button>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/linekdin_icon.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/telegram_icon.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/youtube_icon.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="bottomBtnBlock">
+          <a href="#mainForm" class="logInBtn">Log in</a>
+          <a href="#mainForm" class="requestDemoBtn" onclick="Index.changeSubject('Получить демо')" data-fancybox><?php pll_e('Получить демо')?></a>
+        </div>
+        </div>
       </nav>
       <div class="additionalBtns">
         <div class="langBlock">
           <?php foreach($translations as $lang):
             if ($lang['current_lang'] == $lang): ?>
-              <button><?php echo $lang['name']; ?></button>
+              <button><?php echo $lang['slug']; ?></button>
             <?php endif;
             endforeach; ?>
               <div class="langList">
             <?php foreach($translations as $lang):
               if ($lang['current_lang'] != $lang): ?>
-              <a href="<?php echo $lang['url'] ?>"><?php echo $lang['name']; ?></a>
+              <a href="<?php echo $lang['url'] ?>"><?php echo $lang['slug']; ?></a>
+            <?php else: ?>
+              <span class="active"><?php echo $lang['slug']?></span>
             <?php endif;
             endforeach; ?>
           </div>
         </div>
-
-
-
-        <a class="enterBtn" href="#mainForm" onclick="Index.changeSubject('Получить демо')" data-fancybox><?php pll_e('Получить демо')?></a>
-        <button class="openMenu" onclick="Index.openMenu()">
-          <svg class="icon icon-menuBurger ">
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#menuBurger"></use>
-          </svg>
+        <a href="#mainForm" class="logInBtn">Log in</a>
+        <a href="#mainForm" class="requestDemoBtn" onclick="Index.changeSubject('Получить демо')" data-fancybox><?php pll_e('Получить демо')?></a>
+        <button class="toggleMenu" onclick="Index.toggleMenu(this)">
+          <span></span>
         </button>
       </div>
     </div>
