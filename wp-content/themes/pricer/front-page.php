@@ -1,374 +1,538 @@
 <?php get_header(); ?>
-<!--Begin Section1-->
-<section class="section1" id="section1">
-  <div class="siteWidth">
-    <h1 class="title"><?php the_field('block1_title')?></h1>
-    <div class="content_text"><?php the_field('block1_subtitle')?></div>
-    <div class="btnWrap">
-      <a class="orange btn" href="#mainForm" onclick="Index.changeSubject('<?php pll_e('Запрос демо')?>')" data-fancybox><?php pll_e('Запрос демо')?></a>
-      <a class="btn" href="#section4" onclick="Index.go_to(this, event)"><?php pll_e('Все возможности')?></a>
-    </div>
-    <div class="imgWrap">
-      <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/success_bg.svg" alt="">
-      <a class="playBtn" data-fancybox href="<?php the_field('block1_playBtn_link')?>">
-        <svg class="icon icon-playBtn ">
-          <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#playBtn"></use>
-        </svg>
-        <span><?php pll_e('Текст кнопки play') ?></span>
-      </a>
-    </div>
-    <h5 class="title"><?php the_field('block1_title2')?></h5>
-    <div class="partnerBlock">
-      <?php if(have_rows('block1_clients')) :
-        while(have_rows('block1_clients')) : the_row() ?>
-          <div class="partner"><img src="<?php the_sub_field('image'); ?>" alt=""></div>
-      <?php endwhile;
-      endif;
-      ?>
-    </div>
-  </div>
-</section>
-<!--End Section-->
-<!--Begin Section2-->
-<section class="section2" id="section2">
-  <div class="siteWidth">
-    <h2 class="title"><?php the_field('block2_title')?></h2>
-    <div class="contentWrapper">
-      <?php if(have_rows('block2_tasks')) :
-        while(have_rows('block2_tasks')) : the_row() ?>
-          <div class="contentItem">
-            <div class="imgWrap">
-              <img src="<?php the_sub_field('image')?>" alt="">
-            </div>
-            <div class="title"><?php the_sub_field('title')?></div>
-            <div class="text content_text"><?php the_field('text')?></div>
-          </div>
-        <?php endwhile;
-      endif;
-      ?>
-    </div>
-  </div>
-</section>
-<!--End Section-->
-<!--Begin Section3-->
-<section class="section3" id="section3">
-  <div class="siteWidth">
-    <h2 class="title"><?php the_field('block3_title')?></h2>
-    <div class="content_text"><?php the_field('block3_subtitle')?></div>
-    <div class="imgWrap">
-      <img src="<?php the_field('block3_bigImg')?>" alt="">
-      <?php if(have_rows('block3_tooltips')) :
-        while(have_rows('block3_tooltips')) : the_row() ?>
-          <div class="tooltip">
-            <svg class="icon icon-info ">
-              <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#info"></use>
-            </svg>
-            <span><?php the_sub_field('text')?></span>
-          </div>
-        <?php endwhile;
-      endif;
-      ?>
-    </div>
-  </div>
-</section>
-<!--End Section-->
-<!--Begin Section4-->
-<section class="section4" id="section4">
-  <div class="siteWidth">
-    <h2 class="title"><?php the_field('block4_title')?></h2>
-    <div class="tabsBlock">
-      <div class="tabsWrap">
-        <?php if(have_rows('block4_possibilities')) :
-          while(have_rows('block4_possibilities')) : the_row() ?>
-            <?php if(get_row_index() == 1):?>
-              <button class="tab active"><?php the_sub_field('title')?></button>
-            <?php else :?>
-              <button class="tab"><?php the_sub_field('title')?></button>
-            <?php endif; ?>
-        <?php endwhile;
-        endif;
-        ?>
-      </div>
-      <div class="tabsContentWrap">
-        <?php if(have_rows('block4_possibilities')) :
-          while(have_rows('block4_possibilities')) : the_row() ?>
-            <?php if(get_row_index() == 1):?>
-              <div class="tabContent active">
-                <div class="contentWrapper">
-                  <div class="leftSide">
-                    <div class="imgWrap">
-                      <img src="<?php the_sub_field('image')?>" alt="">
-<!--                      --><?php //if(have_rows('tooltips')) :
-//                        while(have_rows('tooltips')) : the_row() ?>
-<!--                          <div class="tooltip">-->
-<!--                            <svg class="icon icon-info ">-->
-<!--                              <use xlink:href="--><?php //echo get_template_directory_uri()?><!--/assets/img/svg/sprite.svg#info"></use>-->
-<!--                            </svg>-->
-<!--                            <span>--><?php //the_sub_field('text')?><!--</span>-->
-<!--                          </div>-->
-<!--                        --><?php //endwhile;
-//                        endif;?>
-                    </div>
-                  </div>
-                  <div class="rightSide">
-                    <h3 class="title"><?php the_sub_field('title')?></h3>
-                    <div class="content_text"><?php the_sub_field('text')?></div>
-                    <?php if(get_sub_field('page_link')):?>
-                      <div class="btnWrap">
-                        <a href="<?php the_sub_field('page_link')?>" class="btn orange"><?php pll_e('Подробнее')?></a>
-                      </div>
-                    <?php endif;?>
-                  </div>
-                </div>
-              </div>
-            <?php else :?>
-              <div class="tabContent">
-                <div class="contentWrapper">
-                  <div class="leftSide">
-                    <div class="imgWrap">
-                      <img src="<?php the_sub_field('image')?>" alt=""></div>
-                  </div>
-                  <div class="rightSide">
-                    <h3 class="title"><?php the_sub_field('title')?></h3>
-                    <div class="content_text"><?php the_sub_field('text')?></div>
-                    <?php if(get_sub_field('page_link')):?>
-                      <div class="btnWrap">
-                        <a href="<?php the_sub_field('page_link')?>" class="btn orange"><?php pll_e('Подробнее')?></a>
-                      </div>
-                    <?php endif;?>
-                  </div>
-                </div>
-              </div>
-            <?php endif; ?>
-          <?php endwhile;
-        endif;
-        ?>
-      </div>
-    </div>
-    <div class="mobileSliderBlock">
-      <div class="controlBlock">
-        <button class="arrow__left">
-          <svg class="icon icon-arrow_left ">
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#arrow_left"></use>
-          </svg>
-        </button>
-        <div class="hiddenBlock"><span class="title"></span><span class="countBlock"></span></div>
-        <button class="arrow__right">
-          <svg class="icon icon-arrow_right ">
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#arrow_right"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="sliderBlock">
-
-        <?php if(have_rows('block4_possibilities')) :
-          while(have_rows('block4_possibilities')) : the_row() ?>
-            <?php if(get_row_index() == 1):?>
-              <div class="sliderItem">
-                <div class="imgWrap"><img src="<?php the_sub_field('image')?>" alt="">
-                  <?php if(have_rows('tooltips')) :
-                    while(have_rows('tooltips')) : the_row() ?>
-                      <div class="tooltip">
-                        <svg class="icon icon-info ">
-                          <use xlink:href="<?php echo get_template_directory_uri()?>/assets/img/svg/sprite.svg#info"></use>
-                        </svg>
-                        <span><?php the_sub_field('text')?>></span>
-                      </div>
-                    <?php endwhile;
-                  endif;?>
-                </div>
-                <div class="textWrap">
-                  <div class="title"><?php the_sub_field('title')?></div>
-                  <div class="content_text text"><?php the_sub_field('text')?></div>
-                  <?php if(get_sub_field('page_link')):?>
-                    <div class="btnWrap">
-                      <a href="<?php the_sub_field('page_link')?>" class="btn orange"><?php the_field('block4_btnText')?></a>
-                    </div>
-                  <?php endif;?>
-                </div>
-              </div>
-            <?php else :?>
-              <div class="sliderItem">
-                <div class="imgWrap"><img src="<?php the_sub_field('image')?>" alt=""></div>
-                <div class="textWrap">
-                  <div class="title"><?php the_sub_field('title')?></div>
-                  <div class="content_text text"><?php the_sub_field('text')?></div>
-                  <?php if(get_sub_field('page_link')):?>
-                    <div class="btnWrap">
-                      <a href="<?php the_sub_field('page_link')?>" class="btn orange"><?php the_field('block4_btnText')?></a>
-                    </div>
-                  <?php endif;?>
-                </div>
-              </div>
-            <?php endif; ?>
-          <?php endwhile;
-        endif;
-        ?>
-      </div>
-    </div>
-  </div>
-</section>
-<!--End Section-->
-<!--Begin Section5-->
-<section class="section5" id="section5">
+<!--Begin indexSection1-->
+<section class="indexSection1" id="indexSection1">
   <div class="siteWidth">
     <div class="innerWrapper">
-      <h3 class="title"><?php the_field('block5_title')?></h3>
-      <div class="content_text"><?php the_field('block5_subtitle')?></div>
-        <div class="btnWrap">
-            <a class="btn btn-padding" href="#mainForm" onclick="Index.changeSubject('<?php pll_e("Получить консультацию"); ?>')" data-fancybox=""><?php pll_e("Получить консультацию"); ?></a>
+      <div class="textWrap">
+        <h1>Clear Product <span>Analytics</span> Service</h1>
+        <div class="description">We help vendors, distributors and online stores<br class="xl"> to get more profit by market analysis</div>
+        <div class="btnsWrap">
+          <a href="" class="btn">Request a Demo</a>
+          <a href="#" class="videoBtn">
+            <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/play_btn.svg" alt="">
+            <span>Watch Video</span>
+          </a>
         </div>
-      <?php // echo do_shortcode('[cf7form cf7key="kontaktnaya-forma-1"]')?>
-<!--      <form onsubmit="Index.sendInit(this);return false" novalidate>-->
-<!--        <input type="hidden" name="project_name" value="___">-->
-<!--        <input type="hidden" name="admin_email" value="">-->
-<!--        <input type="hidden" name="registration_type" value="pop-up форма">-->
-<!--        <input type="hidden" name="order_type" value="Call request">-->
-<!--        <input type="hidden" name="page_url" value="">-->
-<!--        <input type="hidden" name="user_agent" value="&lt;?php echo $user_agent?&gt;">-->
-<!--        <input type="hidden" name="utm_source" value="&lt;?php echo $data[&quot;utm_source&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utm_campaign" value="&lt;?php echo $data[&quot;utm_campaign&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utm_medium" value="&lt;?php echo $data[&quot;utm_medium&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utm_term" value="&lt;?php echo $data[&quot;utm_term&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utm_content" value="&lt;?php echo $data[&quot;utm_content&quot;]?&gt;">-->
-<!--        <input type="hidden" name="ref" value="&lt;?php echo $data[&quot;ref&quot;]?&gt;">-->
-<!--        <input type="hidden" name="ip_address" value="&lt;?php echo $data[&quot;ip_address&quot;]?&gt;">-->
-<!--        <input type="hidden" name="city" value="">-->
-<!--        <input type="hidden" name="region" value="">-->
-<!--        <input type="hidden" name="country" value="">-->
-<!--        <input type="hidden" name="client_id" value="&lt;?php echo $data[&quot;client_id&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utmcsr" value="&lt;?php echo $data[&quot;utmcsr&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utmccn" value="&lt;?php echo $data[&quot;utmccn&quot;]?&gt;">-->
-<!--        <input type="hidden" name="utmcmd" value="&lt;?php echo $data[&quot;utmcmd&quot;]?&gt;">-->
-<!--        <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">-->
-<!--        <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">-->
-<!--        <div class="inputWrapper name">-->
-<!--          <input type="text" name="name" placeholder="Имя" required>-->
-<!--        </div>-->
-<!--        <div class="inputWrapper phone">-->
-<!--          <input type="text" name="phone" placeholder="Телефон" required>-->
-<!--        </div>-->
-<!--        <div class="inputWrapper company">-->
-<!--          <input type="text" name="company" placeholder="Компания" required>-->
-<!--        </div>-->
-<!--        <div class="btnWrap">-->
-<!--          <button class="btn">Получить консультацию</button>-->
-<!--        </div>-->
-<!--      </form>-->
+      </div>
+      <div class="imgWrap">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/indexSection_img1.png" alt="">
+      </div>
     </div>
   </div>
 </section>
 <!--End Section-->
-<!--Begin Section6-->
-<section class="section6" id="section6">
+<!--Begin indexSection2-->
+<section class="indexSection2" id="indexSection2">
   <div class="siteWidth">
-    <h2 class="title"><?php the_field('block6_title')?></h2>
-    <div class="contentWrapper">
-      <?php if(have_rows('block6_steps')) :
-        while(have_rows('block6_steps')) : the_row() ?>
-          <div class="contentItem">
-            <div class="imgWrap">
-              <img src="<?php the_sub_field('image')?>" alt="">
-            </div>
-            <div class="title"><?php the_sub_field('title')?></div>
-            <div class="content_text"><?php the_sub_field('text')?></div>
-          </div>
-        <?php endwhile;
-      endif;
-      ?>
+    <h4>Trusted by</h4>
+    <div class="companyWrapper">
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_1.png" width="80" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_2.png" width="72" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_3.png" width="93" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_4.png" width="76" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_5.png" width="79" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_6.png" width="117" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_7.png" width="69" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_8.png" width="95" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_9.png" width="94" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_10.png" width="81" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_11.png" width="91" alt="">
+      </div>
+      <div class="companyItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_12.png" width="128" alt="">
+      </div>
     </div>
   </div>
 </section>
 <!--End Section-->
-<!--Begin Section7-->
-<section class="section7" id="section7">
+<!--Begin indexSection3-->
+<section class="indexSection3" id="indexSection3">
   <div class="siteWidth">
-    <div class="topSide">
-      <?php /*<div class="leftSide">
-        <div class="imgWrap"><img src="<?php the_field('block7_image')?>" alt=""></div>
-      </div>*/ ?>
-      <div class="rightSide">
-        <h2 class="title"><?php the_field('block7_title')?></h2>
-          <div class="home_two_columns">
-              <div class="home_two_columns_img"><img src="/wp-content/themes/pricer/assets/img/svg/robot.svg" width="105" height="113"></div>
-              <div class="home_two_columns_text"><div class="content_text"><?php the_field('block7_subtitle')?></div></div>
+    <div class="titleBlock">
+      <h2>Use Case Examples</h2>
+      <div class="description">We help vendors, distributors and online stores to get more profit<br class="xl"> by Product Analytics</div>
+    </div>
+    <div class="mainContentWrapper">
+      <div class="contentWrapper">
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
           </div>
-        <div class="btnWrap">
-            <?php /*  ?>
-<!--          <a href="--><?php //the_field('block7_btn_link')?><!--" class="btn">--><?php //pll_e('О нас')?><!--</a>-->
-          <a class="btn" data-fancybox href="#mainForm" onclick="Index.changeSubject('<?php the_field('block7_btnText')?>')"><?php the_field('block7_btnText')?></a>
-            <?php /* */ ?>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze MSRP monitoring</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+              </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contentItem">
+          <div class="imgWrap">
+            <img src="http://pricer.loc/wp-content/uploads/2023/03/solutions_menu_img.png" alt="">
+          </div>
+          <div class="textWrap">
+            <h5 class="title">I want to analyze competitor prices and promotions in Real Time</h5>
+          </div>
+          <div class="solutionsBlock">
+            <div class="title">solutions:</div>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="solutionItem">
+              <span class="iconWrap">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/sol_icon.svg" alt="">
+              </span>
+              <span class="textWrap">
+                <span class="solTitle">MSRP monitoring</span>
+                <span class="solDesc">Analyze the whole market</span>
+                </span>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10L20.2 1.8M21 5.8V1H16.2M10 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21H14C19 21 21 19 21 14V12" stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="bottomSide">
-      <?php if(have_rows('block7_info')) :
-        while(have_rows('block7_info')) : the_row() ?>
-          <div class="contentItem">
-            <div class="int"><?php the_sub_field('top')?></div>
-            <div class="content_text"><?php the_sub_field('bottom')?></div>
-          </div>
-        <?php endwhile;
-      endif;
-      ?>
+    <div class="btnWrap">
+      <button>
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.43 0.929688L18.5 6.99969L12.43 13.0697M1.5 6.99969H18.33" stroke="inherit" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Load more</span>
+      </button>
     </div>
   </div>
 </section>
 <!--End Section-->
-<!--Begin Section8-->
-<section class="section8" id="section8">
+<!--Begin indexSection4-->
+<section class="indexSection4" id="indexSection4">
   <div class="siteWidth">
-    <h2 class="title"><?php the_field('block8_title')?></h2>
+    <div class="textBlock">
+      <h2>Your <span>journey</span> starts here</h2>
+      <div class="description">As your customers change how they want to access<br class="xl"> your products and services, you have to evolve how<br class="xl"> you do business.</div>
+      <div class="btnWrap">
+        <a href="" class="btn">Request a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Section-->
+<!--Begin indexSection5-->
+<section class="indexSection5" id="indexSection5">
+  <div class="siteWidth">
     <div class="sliderBlock">
-
-      <?php if(have_rows('block8_cases')) :
-        while(have_rows('block8_cases')) : the_row() ?>
-          <div class="sliderItem">
-            <div class="company"><img src="<?php the_sub_field('image')?>" alt=""></div>
-            <h4 class="title"><?php the_sub_field('title')?></h4>
-            <div class="content_text"><?php the_sub_field('text')?></div>
-            <div class="sphere"><?php the_sub_field('sphere')?></div>
-            <div class="btnsWrap">
-              <a class="btn orange" data-fancybox href="#mainForm" onclick="Index.changeSubject('<?php pll_e('Хотим так же') ?>')"><?php pll_e('Хотим так же')?></a>
-              <a href="<?php the_sub_field('rightBtn_link')?>" target="_blank" class="btn transparent"><?php pll_e('Ознакомиться с кейсом')?></a>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_1.jpg" alt="">
+      </div>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_2.jpg" alt="">
+      </div>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_3.jpg" alt="">
+      </div>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_1.jpg" alt="">
+      </div>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_2.jpg" alt="">
+      </div>
+      <div class="sliderItem">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/slider_3.jpg" alt="">
+      </div>
+    </div>
+    <div class="textBlock">
+      <h4 class="title">Multifunctional Dashboards</h4>
+      <div class="description">All the features to make analysis simple, clear and effective for business. All the features to make analysis simple, clear and effective for business.</div>
+    </div>
+  </div>
+</section>
+<!--End Section-->
+<!--Begin indexSection6-->
+<section class="indexSection6" id="indexSection6">
+  <div class="siteWidth">
+    <h4>Industries</h4>
+    <div class="contentWrapper">
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon1.svg" alt="">
+        </div>
+        <div class="textWrap">Electronics</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon2.svg" alt="">
+        </div>
+        <div class="textWrap">Household goods</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon3.svg" alt="">
+        </div>
+        <div class="textWrap">Toys</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon4.svg" alt="">
+        </div>
+        <div class="textWrap">DIY (tools)</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon5.svg" alt="">
+        </div>
+        <div class="textWrap">Plumbing</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon6.svg" alt="">
+        </div>
+        <div class="textWrap">Pharmaceuticals</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon7.svg" alt="">
+        </div>
+        <div class="textWrap">Pet supplies</div>
+      </div>
+      <div class="contentItem">
+        <div class="iconWrap">
+          <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/industries_icon8.svg" alt="">
+        </div>
+        <div class="textWrap">Tires, wheels, etc.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Section-->
+<!--Begin indexSection7-->
+<section class="indexSection7" id="indexSection7">
+  <div class="siteWidth">
+    <div class="innerWrapper">
+      <div class="leftSide">
+        <h4>cases study</h4>
+        <div class="caseStudyElement">
+          <div class="imgWrap">
+            <img src="<?php echo get_template_directory_uri()?>/assets/img/case_study_img1.jpg" alt="">
+            <div class="category">Case study</div>
+          </div>
+          <div class="textWrap">
+            <h5 class="title">How Telemart.ua implemented Pricer24 product analytics and increased profits by 25%</h5>
+            <div class="description">In 2020, during the growing popularity of mining we made the integration of reports for parsing and segmentation of the video card market...</div>
+            <div class="date">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/calendar.svg" alt="">
+              <span>21.10.2022</span>
+            </div>
+            <div class="btnWrap">
+              <a href="#" class="btn">Read more</a>
             </div>
           </div>
-        <?php endwhile;
-      endif;
-      ?>
-    </div>
-  </div>
-</section>
-<!--End Section-->
-
-<?php echo get_template_part ('includes/form')?>
-
-
-
-
-
-
-
-
-
-<!--Begin Section10-->
-<section class="section10" id="section10">
-  <div class="siteWidth">
-    <h2 class="title"><?php the_field('block10_title')?></h2>
-    <div class="accordionBlock">
-      <?php if(have_rows('block10_answers')) :
-        while(have_rows('block10_answers')) : the_row() ?>
-          <?php if(get_row_index() == 1):?>
-          <div class="accordionItem active">
-          <?php else :?>
-            <div class="accordionItem">
-          <?php endif; ?>
-            <div class="itemTitle"><?php the_sub_field('title')?></div>
-            <div class="switcher"></div>
-            <div class="itemText content_text"><?php the_sub_field('text')?></div>
-          </div>
-        <?php endwhile;
-      endif ;?>
+        </div>
+      </div>
+      <div class="rightSide">
+        <h4>updated and news</h4>
+        <div class="contentWrapper">
+          <a href="#" class="contentItem">
+            <h5 class="title">Herding elephants: Lessons learned from sharding Postgres at Pricer24</h5>
+            <span class="category">For vendors</span>
+            <span class="desc">In 2020, during the growing popularity of mining we made the integration...</span>
+            <span class="date">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/calendar.svg" alt="">
+              <span>21.10.2022</span>
+            </span>
+          </a>
+          <a href="#" class="contentItem">
+            <h5 class="title">Herding elephants from Pricer24</h5>
+            <span class="category">Analytics</span>
+            <span class="desc">In 2020, during the growing popularity of mining we made the integration...</span>
+            <span class="date">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/calendar.svg" alt="">
+              <span>01.09.2022</span>
+            </span>
+          </a>
+          <a href="#" class="contentItem">
+            <h5 class="title">Herding elephants: Lessons learned from sharding Postgres at Pricer24.</h5>
+            <span class="category">For vendors</span>
+            <span class="desc">In 2020, during the growing popularity of mining we made the integration...</span>
+            <span class="date">
+              <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/calendar.svg" alt="">
+              <span>20.05.2022</span>
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
