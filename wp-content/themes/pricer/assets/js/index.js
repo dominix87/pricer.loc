@@ -61,6 +61,12 @@ var Index =
       }
     },
 
+    categoryListToggler: function(fThis){
+        let catList = $('.categoryList','.categoryBlock');
+        $(fThis).toggleClass('active');
+        $(catList).toggleClass('active');
+    },
+
      facebookShare: function(){
         event.preventDefault();
         windowLocation = window.location.href.replace(window.location.hash, '');

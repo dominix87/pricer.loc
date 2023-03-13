@@ -1,53 +1,84 @@
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package pricer
- */
+<?php get_header();?>
+<section class="blogPage_section1">
+  <div class="siteWidth">
+    <?php
+    if ( function_exists('yoast_breadcrumb') ) {
+      yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+    }
+    ?>
+    <div class="innerWrapper">
+      <div class="sideBarBlock">
+        <div class="categoryWrapperBlock">
+          <div class="searchBlock">
+            <form action="<?php echo esc_url( home_url( '/' ) ); ?>">
+              <div class="searchWrapper">
+                <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search">
+              </div>
+            </form>
+          </div>
+          <div class="categoryBlock">
+            <?php $categories = get_categories(); ?>
+            <ul>
+              <?php foreach($categories as $category):?>
+                <?php
+                $iconPth = get_field('icon',$category->taxonomy . '_' . $category->term_id);
+                $bgColor = get_field('color',$category->taxonomy . '_' . $category->term_id); ?>
+                <?php if ($iconPth):?>
+                  <li>
+                    <a href="<?php echo get_category_link($category->term_id)?>" class="catLink">
+                      <img src="<?php echo $iconPth; ?>" alt="">
+                      <span><?php echo $category->name; ?></span>
+                      <span class="bg" style="background-color:<?php echo $bgColor; ?>"></span>
+                    </a>
+                  </li>
+                <?php endif;?>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          <div class="socialsBlock">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/facebook_icon.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/linekdin_icon.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/telegram_icon.png" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/youtube_icon.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mainContentBlock">
+        <div class="currentSearchQueryBlock">
+          <div class="textWrap">Searching for: "<?php echo get_search_query(); ?>"</div>
+        </div>
+        <div class="restContentBlock">
+          <?php if(have_posts()):?>
+            <div class="contentWrapper">
+              <?php while(have_posts()): ?>
+                <?php the_post();
+                get_template_part('/includes/post');
+              endwhile; ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-get_header();
-?>
 
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'pricer' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

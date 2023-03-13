@@ -7,7 +7,7 @@
         <h1>Clear Product <span>Analytics</span> Service</h1>
         <div class="description">We help vendors, distributors and online stores<br class="xl"> to get more profit by market analysis</div>
         <div class="btnsWrap">
-          <a href="" class="btn">Request a Demo</a>
+          <a href="#" class="btn">Request a Demo</a>
           <a href="#" class="videoBtn">
             <img src="<?php echo get_template_directory_uri()?>/assets/img/svg/play_btn.svg" alt="">
             <span>Watch Video</span>

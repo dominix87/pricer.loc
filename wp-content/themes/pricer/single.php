@@ -49,6 +49,17 @@ get_header(); ?>
             </div>
           </form>
         </div>
+        <div class="ctaBlock">
+          <div class="title">Take a consultation</div>
+          <ul>
+            <li>Sales funnel</li>
+            <li>Automation</li>
+            <li>Mailing email</li>
+          </ul>
+          <div class="btnWrap">
+            <a href="#">Request a demo</a>
+          </div>
+        </div>
         <div class="recommendPosts">
           <h4>Recommended posts</h4>
           <div class="contentWrapper">
@@ -73,7 +84,7 @@ get_header(); ?>
 
       <div class="sideBarBlock">
         <div class="stickyWrapper">
-          <div class="ctaBlock">
+          <div class="ctaHiddenBlock">
             <div class="title">Take a consultation</div>
             <ul>
               <li>Sales funnel</li>

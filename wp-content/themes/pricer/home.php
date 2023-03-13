@@ -17,14 +17,18 @@
             </form>
           </div>
           <div class="categoryBlock">
+            <button class="categoryListToggler" onclick="Index.categoryListToggler(this)">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/allCatsIcon.png" alt="">
+              <span>All categories</span>
+            </button>
             <?php $categories = get_categories(); ?>
-            <ul>
+            <ul class="categoryList">
               <?php foreach($categories as $category):?>
                 <?php
                 $iconPth = get_field('icon',$category->taxonomy . '_' . $category->term_id);
                 $bgColor = get_field('color',$category->taxonomy . '_' . $category->term_id); ?>
                 <?php if ($iconPth):?>
-                  <li style="">
+                  <li>
                     <a href="<?php echo get_category_link($category->term_id)?>" class="catLink">
                       <img src="<?php echo $iconPth; ?>" alt="">
                       <span><?php echo $category->name; ?></span>
