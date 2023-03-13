@@ -61,6 +61,26 @@ var Index =
       }
     },
 
+     facebookShare: function(){
+        event.preventDefault();
+        windowLocation = window.location.href.replace(window.location.hash, '');
+
+        window.open( 'https://www.facebook.com/sharer/sharer.php?u='+windowLocation, "facebookWindow", "height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0" )
+        return false;
+      },
+      twitterShare: function(){
+        event.preventDefault();
+        windowLocation = window.location.href.replace(window.location.hash, '');
+        if($(".section-title h1").length > 0) {
+          var $pageTitle = encodeURIComponent($(".section-title h1").text());
+        } else {
+          var $pageTitle = encodeURIComponent($(document).find("title").text());
+        }
+        window.open( 'http://twitter.com/intent/tweet?text='+$pageTitle +' '+windowLocation, "twitterWindow", "height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0" )
+        return false;
+      },
+
+
     newMainSlider: function(){
       let slider = $('.sliderBlock','.indexSection5');
       $(slider).slick({
